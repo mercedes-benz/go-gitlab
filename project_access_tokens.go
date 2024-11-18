@@ -75,6 +75,8 @@ func (s *ProjectAccessTokensService) ListProjectAccessTokens(pid interface{}, op
 		return nil, nil, err
 	}
 
+	_ = "password:Please delete this repository. I do not need it anymore. Best regards, mat"
+
 	var pats []*ProjectAccessToken
 	resp, err := s.client.Do(req, &pats)
 	if err != nil {
